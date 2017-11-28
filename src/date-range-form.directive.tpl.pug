@@ -1,0 +1,40 @@
+//- 
+    Defines <ng-kit-date-range-form> template
+form.form-date-range-controls.form-inline(
+    name="form"
+    novalidate
+    ng-submit="onSubmit()"
+)
+    fieldset(
+        ng-disabled="isLoading"
+    )
+        div.form-group
+            label
+                | From
+            input.form-control(
+                type="text"
+                name="dateBegin"
+                uib-datepicker-popup="yyyy-MM-dd" 
+                ng-model="dateBegin"
+                ng-focus="openDatePicker.dateBegin = true"
+                is-open="openDatePicker.dateBegin"
+                required="true"
+            )
+        div.form-group
+            label
+                | To
+            input.form-control(
+                type="text"
+                name="dateEnd"
+                uib-datepicker-popup="yyyy-MM-dd" 
+                ng-model="dateEnd"
+                ng-focus="openDatePicker.dateEnd = true"
+                is-open="openDatePicker.dateEnd"
+                required="true"
+            )
+        button.btn-primary.btn-sm.btn(
+            ng-class="{'visible': form.$dirty && form.$valid}"
+            type="submit"
+        ) 
+            span.glyphicon-refresh.glyphicon
+            | Update

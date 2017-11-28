@@ -1,0 +1,20 @@
+{
+  "name": "ng-kit-date-range-form-example",
+  "version": "1.0.0",
+  "description": "An example shows how to use the <ng-kit-date-range-form> directive.",
+  "main": "index.js",
+  "keywords": [
+    "angular",
+    "bootstrap"
+  ],
+  "author": "daniel@inquiresimplicity.com",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.11",
+    "angular-kit-date-range-form": "file:..",
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^3.3.7",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}
